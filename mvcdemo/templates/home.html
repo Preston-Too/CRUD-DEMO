@@ -12,18 +12,18 @@
                     <tr>
                         <th>Product</th>
                         <th>Description</th>
-                        <th>Date Posted</th>
+                        <!-- <th>Date Posted</th> -->
                         <th>price</th>
-                        <th>update</th>
-                        <th>Remove</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
                     </tr>
                     {%for product in products%}
                     <tr>
                         <td>{{product.name}}</td>
                         <td>{{product.description}}</td>
-                        <td>{{product.date_created}}</td>
+                        <!-- <td>{{product.date_created}}</td> -->
                         <td>{{product.price}}</td>
-                        <td><a class="btn btn-sm btn-info" href="{% url 'update_product' product.id %}">Update</a></td>
+                        <td><a class="btn btn-sm btn-info" href="{% url 'update_product' product.id %}">Edit</a></td>
                         <td><a class="btn btn-sm btn-danger" href="{% url 'delete_product' product.id %}">Delete</a></td>
                     </tr>
                     {% endfor %}
